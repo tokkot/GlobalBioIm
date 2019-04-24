@@ -38,7 +38,7 @@ end
 if nargin < 4 || isempty(v0)
 	s = rng;
 	rng(42); % make initialization deterministic 
-	v0 = 2*(rand(A.sizein)-.5);
+	v0 = 2*(rand([A.sizein 1])-.5);
 	rng(s); % restore RNG state
 end
 if nargin < 5 || isempty(verboseFlag)
